@@ -6,7 +6,7 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:45:22 by mowardan          #+#    #+#             */
-/*   Updated: 2024/11/01 21:41:20 by macbook          ###   ########.fr       */
+/*   Updated: 2024/11/04 00:52:18 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,23 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    size_t  i;
-    size_t  j;
+	size_t	i;
 
-    i = ft_strlen(src);
-    j = 0;
-    
-    if (size > 0)
-    {
-        while(j < size - 1 && src[j])
-        {
-            dst[j] = src[j];
-            j++;
-        }
-        dst[i] = '\0';
-    }
-    return(i);
+	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
+	while (i + 1 < size && src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }
 // int main() {
 //     char dest[20] = "amine";
 //     const char *src = "Hello, World!";
-    
+
 //     // Case 1: Standard copy
 //     ft_strlcpy(dest, src, sizeof(dest));
 //     printf("Case 1: Standard copy\n");

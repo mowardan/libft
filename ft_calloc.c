@@ -1,16 +1,16 @@
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-    void	*mem;
+	void	*mem;
 
 	mem = malloc(size * count);
 	if (mem != 0)
-    {
-        ft_bzero(mem, size * count);
-        return (mem);
-    }
-    return NULL;
+	{
+		ft_bzero(mem, size * count);
+		return (mem);
+	}
+	return NULL;
 }
 
 /*int	main(void)

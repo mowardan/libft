@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mowardan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 14:18:24 by mowardan          #+#    #+#             */
-/*   Updated: 2024/10/23 14:37:24 by mowardan         ###   ########.fr       */
+/*   Updated: 2024/11/04 00:47:11 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	size_t	i;
 
 	i = 0;
-	if (!str)
-		return 0;
-	while(str[i])
+	while (s[i])
 	{
-		if (str[i] == (char)c)
-			return ((char *)str + i);
+		if ((unsigned char)s[i] == (unsigned char)c)
+			return ((char *)&s[i]);
 		i++;
 	}
-	return(0);
+	if ((unsigned char)s[i] == (unsigned char)c)
+		return ((char *)&s[i]);
+	return (NULL);
 }
