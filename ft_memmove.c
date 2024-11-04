@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mowardan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 11:46:44 by mowardan          #+#    #+#             */
-/*   Updated: 2024/10/25 12:28:28 by mowardan         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:33:51 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 void *ft_memmove(void *dst, const void *src, size_t n)
 {
-	const unsigned char *s = src;
-	char unsigned *d = dst;
+	const unsigned char *s;
+	char unsigned *d;
 
+    s = (const unsigned char *)src;
+    d = (char unsigned *)dst;
 	if (d > s)
 	{
 		while(n--)
@@ -24,7 +26,7 @@ void *ft_memmove(void *dst, const void *src, size_t n)
 	}
 	else
 	{
-		ft_memcpy(dst, src, n);	
+		ft_memcpy(dst, src, n);
 	}
 	return(dst);
 }
@@ -40,7 +42,7 @@ void *ft_memmove(void *dst, const void *src, size_t n)
 /*#include <stdio.h>
 #include <string.h>
 
-int main() 
+int main()
 {
     char src1[] = "Hello, World!";
     char dest1[20];

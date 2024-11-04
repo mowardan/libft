@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mowardan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 10:16:22 by mowardan          #+#    #+#             */
-/*   Updated: 2024/10/26 10:17:15 by mowardan         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:37:29 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-    const unsigned char *ptr = s;
-    unsigned char z = c;
+    const unsigned char *ptr;
+    unsigned char z;
 
+    ptr = (const unsigned char *)s;
+    z = (unsigned char)c;
     while(n--)
     {
         if(*ptr == z)

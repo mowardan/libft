@@ -6,7 +6,7 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:31:43 by mowardan          #+#    #+#             */
-/*   Updated: 2024/11/03 02:00:09 by macbook          ###   ########.fr       */
+/*   Updated: 2024/11/04 16:18:05 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h>
 #include <string.h>
 
 int     ft_isalpha(int arg);
@@ -50,5 +51,6 @@ char *ft_strtrim(char const *s1, char const *set);
 void ft_putnbr_fd(int n, int fd);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char    *ft_itoa(int n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 #endif

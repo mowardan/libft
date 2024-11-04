@@ -12,20 +12,3 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return NULL;
 }
-
-/*int	main(void)
-{
-	void	*ptrc;
-	void	*ptrm;
-	int		i;
-
-	ptrc = calloc(3, 4);
-	ptrm = malloc(12);
-	i = 0;
-	while (i < 12)
-	{
-		printf("%c__", ((char *)ptrm)[i] + 48);
-		printf("%c\n", ((char *)ptrc)[i] + 48);
-		i++;
-	}
-}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mowardan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:25:06 by mowardan          #+#    #+#             */
-/*   Updated: 2024/10/24 16:00:03 by mowardan         ###   ########.fr       */
+/*   Updated: 2024/11/04 18:38:04 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,13 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t i = 0;
-	const unsigned char *p1 = s1;
-	const unsigned char *p2 = s2;
+	size_t i;
+	const unsigned char *p1;
+	const unsigned char *p2;
 
+    p1 = (const unsigned char *)s1;
+    p2 = (const unsigned char *)s2;
+    i = 0;
 	while(i < n)
 	{
 		if(p1[i] != p2[i])
