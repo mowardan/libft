@@ -6,7 +6,7 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 00:46:59 by macbook           #+#    #+#             */
-/*   Updated: 2024/11/04 00:19:48 by macbook          ###   ########.fr       */
+/*   Updated: 2024/11/06 12:27:21 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,19 @@ static int	get_needed_size(int n)
 	long	nbr;
 
 	nbr = n;
+	count = 0;
+	if(n == 0)
+		return(1);
 	if (n < 0)
-		nbr = -nbr;
-	count = 1;
-	while ((int)(nbr / 10) > 0)
 	{
-		nbr = nbr / 10;
+		nbr = -nbr;
 		count++;
+	}
+	while (nbr > 0)
+	{
+		count++;
+		nbr = nbr / 10;
+
 	}
 	return (count);
 }
@@ -38,26 +44,21 @@ char	*ft_itoa(int n)
 	size = get_needed_size(n);
 	nbr = n;
 	if (n < 0)
-	{
 		nbr = -nbr;
-		size++;
-	}
-	mem = malloc(size + 1);
+	mem = malloc(sizeof(char) * size + 1);
 	if (!mem)
 		return (NULL);
+	if(nbr == 0)
+	{
+		mem[0] = '0';
+	}
 	mem[size] = '\0';
-	while ((int)(nbr / 10) > 0)
+	while (nbr > 0)
 	{
 		mem[--size] = '0' + nbr % 10;
 		nbr = nbr / 10;
 	}
-	mem[--size] = '0' + nbr % 10;
 	if (n < 0)
-		mem[--size] = '-';
+		mem[0] = '-';
 	return (mem);
 }
-
-// int main()
-// {
-// 	printf("%s",ft_itoa(-247483648));
-// }

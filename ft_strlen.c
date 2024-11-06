@@ -6,7 +6,7 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 15:10:20 by mowardan          #+#    #+#             */
-/*   Updated: 2024/11/04 18:39:01 by macbook          ###   ########.fr       */
+/*   Updated: 2024/11/06 15:44:30 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlen(const char *c)
 
 /*int main()
 {
-	const char *c = "noura zin dlealam";
+	const char *c = "amine";
 
 	printf("%ld", ft_strlen(c));
 }*/

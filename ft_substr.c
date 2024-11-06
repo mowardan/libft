@@ -6,7 +6,7 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 00:04:26 by macbook           #+#    #+#             */
-/*   Updated: 2024/11/03 22:03:53 by macbook          ###   ########.fr       */
+/*   Updated: 2024/11/06 14:36:32 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,27 @@
 
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-        size_t                  i;
-        char                    *mem;
-        unsigned int    str_len;
+    size_t	i;
+    char	*mem;
+    unsigned int	str_len;
 
-        str_len = ft_strlen(s);
-        if (start >= str_len)
-                len = 0;
-        if (len > str_len - start)
-                len = str_len - start;
-        mem = (char *)malloc(len + 1);
-        if (mem != NULL)
+	if(!s)
+		return(NULL);
+    str_len = ft_strlen(s);
+    if (start >= str_len)
+        len = 0;
+    if (len > str_len - start)
+        len = str_len - start;
+    mem = (char *)malloc(len + 1);
+    if (mem != NULL)
+    {
+        i = 0;
+        while (s[i] && i < len)
         {
-                i = 0;
-                while (s[i] && i < len)
-                {
-                        mem[i] = s[start + i];
-                        i++;
-                }
-                mem[i] = 0;
+            mem[i] = s[start + i];
+            i++;
         }
-        return (mem);
+        mem[i] = 0;
+    }
+    return (mem);
 }
