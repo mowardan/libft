@@ -6,12 +6,11 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 15:25:06 by mowardan          #+#    #+#             */
-/*   Updated: 2024/11/06 10:58:42 by macbook          ###   ########.fr       */
+/*   Updated: 2024/11/07 01:25:34 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
