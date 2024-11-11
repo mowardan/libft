@@ -6,7 +6,7 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 00:19:52 by macbook           #+#    #+#             */
-/*   Updated: 2024/11/07 19:29:13 by macbook          ###   ########.fr       */
+/*   Updated: 2024/11/10 15:44:52 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 void    ft_putstr_fd(char *s, int fd)
 {
     int len;
-
+    if(!s)
+        return;
     len = ft_strlen(s);
     write(fd, s, len);
 }
