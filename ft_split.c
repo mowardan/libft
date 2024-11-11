@@ -51,7 +51,7 @@ static char	**one_more_line(char const*s, char c, char **str, size_t count)
 		if (str[i] == NULL)
 		{
 			ft_free(str);
-			return (0);
+			return (NULL);
 		}
 		start = end;
 		i++;
@@ -71,8 +71,7 @@ char	**ft_split(char const *s, char c)
 	new_str = malloc((count + 1) * sizeof(char *));
 	if (new_str == NULL )
 		return (NULL);
-	one_more_line(s, c, new_str, count);
-	if (new_str == NULL)
+	if (one_more_line(s, c, new_str, count) == NULL)
 		return (NULL);
 	return (new_str);
 }

@@ -6,7 +6,7 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 00:46:59 by macbook           #+#    #+#             */
-/*   Updated: 2024/11/06 12:27:21 by macbook          ###   ########.fr       */
+/*   Updated: 2024/11/11 14:35:08 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,7 @@ char	*ft_itoa(int n)
 	if (!mem)
 		return (NULL);
 	if(nbr == 0)
-	{
 		mem[0] = '0';
-	}
 	mem[size] = '\0';
 	while (nbr > 0)
 	{
