@@ -6,20 +6,41 @@
 /*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:31:43 by mowardan          #+#    #+#             */
-/*   Updated: 2024/11/08 10:48:44 by macbook          ###   ########.fr       */
+/*   Updated: 2025/01/29 10:39:02 by macbook          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 #define LIBFT_H
+
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
+#include <limits.h>
 #include <string.h>
 
+typedef struct s_list
+{
+        int                             value;
+        struct s_list   *next;
+}                                       t_list;
+
+//bonus
+
+t_list                          *ft_lstnew(int value);
+void                            ft_lstadd_front(t_list **lst, t_list *new);
+int                             ft_lstsize(t_list *lst);
+t_list                          *ft_lstlast(t_list *lst);
+void                            ft_lstadd_back(t_list **lst, t_list *new);
+void                            ft_lstdelone(t_list *lst, void (*del)(int));
+
+//mandatory
+
+int ft_3atwa(const char *str);
 int     ft_isalpha(int arg);
 int     ft_isdigit(int arg);
+int		ft_isspace(char c);
 int     ft_isalnum(int c);
 int     ft_isascii(int arg);
 int     ft_isprint(int arg);
