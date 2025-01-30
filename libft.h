@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: macbook <macbook@student.42.fr>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 11:31:43 by mowardan          #+#    #+#             */
-/*   Updated: 2025/01/29 10:39:02 by macbook          ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef LIBFT_H
 #define LIBFT_H
 
@@ -37,7 +25,7 @@ void                            ft_lstdelone(t_list *lst, void (*del)(int));
 
 //mandatory
 
-int ft_3atwa(const char *str);
+int     ft_3atwa(const char *str);
 int     ft_isalpha(int arg);
 int     ft_isdigit(int arg);
 int		ft_isspace(char c);

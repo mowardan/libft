@@ -20,11 +20,10 @@ int ft_3atwa(const char *str)
 		sign *= -1;
 	i++;
     }
-    while (str[i] >= '0' && str[i] <= '9' && str[i])
+    while (str[i] >= '0' && str[i] <= '9')
     {
         r = r * 10 + (str[i] - 48);
         i++;
     }
     return (r * sign);
 }
-
